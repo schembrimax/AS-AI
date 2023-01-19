@@ -44,10 +44,10 @@ func new_generation():
 	current_generation=1
 	for i in n_agents:
 		var new_agent = agent_scene.instance()
-		add_child(new_agent)
 		$Path2D/PathFollow2D.unit_offset = randf()
 		new_agent.position = $Path2D/PathFollow2D.position
 		new_agent.rotate(randf()* 2*PI)
+		add_child(new_agent)
 		agents.append(new_agent)
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.

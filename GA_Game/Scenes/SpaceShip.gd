@@ -43,7 +43,6 @@ func _process(delta):
 	
 func step():
 	age += 1
-	calc_fitness()
 	for i in sensors.size():
 		input_vector[i] = sensors[i].read_sensor()
 		
@@ -86,6 +85,7 @@ func explode():
 
 
 func _on_Area2D_area_entered(area):
+	calc_fitness()
 	alive = false
 	#explode()
 	pass # Replace with function body.
