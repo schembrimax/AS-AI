@@ -1,0 +1,43 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Agent",
+"language": "GDScript",
+"path": "res://Scenes/SpaceShip.gd"
+}, {
+"base": "Reference",
+"class": "NeuralNetwork",
+"language": "GDScript",
+"path": "res://NeuralNetwork.gd"
+} ]
+_global_script_class_icons={
+"Agent": "",
+"NeuralNetwork": ""
+}
+
+[application]
+
+config/name="GA test"
+run/main_scene="res://Scenes/MainScene.tscn"
+config/icon="res://icon.png"
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
